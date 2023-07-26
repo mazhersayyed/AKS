@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mazhersayyedaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mazhersayyedaks
+  template:
+    metadata:
+      labels:
+        app: mazhersayyedaks 
+    spec:
+      containers:
+        - name: mazhersayyedaks 
+          image: saniya.azurecr.io/mazhersayyedaks
+          ports:
+          - containerPort: 80
